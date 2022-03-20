@@ -35,16 +35,16 @@
 - #### 인터페이스에 맞춘 프로그래밍은 코드의 재사용성과 변경에 유연하다
   - 상속과 인터페이스를 통한 문제점을 해결할 수 있다
   - 기능을 다른 클래스에 `위임`한다
-```text
-        <Interface>          
-        FlyBehavior      <------------ Duck 클래스    
-      ______|______                    FlyBehavior
-      |           |                         |
-FlyWithWings   FlyNoWay                     |
-  fly() {       fly() {                MallardDuck
-    ...           ...          FlyBehavior = new FlyWithWings(); 
-  }             }
-```
+  ```text
+          <Interface>          
+          FlyBehavior      <------------ Duck 클래스    
+        ______|______                    FlyBehavior
+        |           |                         |
+  FlyWithWings   FlyNoWay                     |
+    fly() {       fly() {                MallardDuck
+      ...           ...          FlyBehavior = new FlyWithWings(); 
+    }             }
+  ```
 
 ### 디자인원칙3. 상속보다는 구성을 사용한다
 - `A에는 B가 있다`. 이를 `구성(Compositon)` 이라 한다
